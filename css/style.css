@@ -429,6 +429,11 @@ html {
   }
 }
 
+img {
+  display: block;
+  max-width: 100%;
+}
+
 .logo {
   font-size: 2.25em;
   line-height: 0.83333em;
@@ -468,15 +473,27 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+}
+
+header .logo {
+  padding: 15px 0;
 }
 
 header .nav {
   display: flex;
   flex-direction: row;
   gap: 40px;
+  flex-wrap: wrap;
   font-size: 1.125em;
   line-height: 1.66667em;
   font-weight: 300;
+}
+
+@media screen and (max-width: 767px) {
+  header .nav {
+    display: none;
+  }
 }
 
 header .nav a {
@@ -495,12 +512,18 @@ header .nav li {
 }
 
 .intro-bg {
-  background: url("../../img/bg.jpg") no-repeat center;
+  background: url("../img/bg.jpg") no-repeat center;
   width: 100%;
   background-size: cover;
   height: 400px;
   text-align: center;
   padding-top: 100px;
+}
+
+@media screen and (max-width: 767px) {
+  .intro-bg {
+    height: 300px;
+  }
 }
 
 .intro-bg .intro h1 {
@@ -512,6 +535,13 @@ header .nav li {
 
 .intro-bg .intro h1 span {
   color: #fa8349;
+}
+
+@media screen and (max-width: 767px) {
+  .intro-bg .intro h1 {
+    font-size: 2.25em;
+    line-height: 0.83333em;
+  }
 }
 
 .intro-bg .intro a {
@@ -529,6 +559,14 @@ header .nav li {
   color: #fa8349;
 }
 
+@media screen and (max-width: 767px) {
+  .intro-bg .intro a {
+    font-size: 1.125em;
+    line-height: 1.66667em;
+    padding: 10px 10px;
+  }
+}
+
 .sobre-bg {
   background: #f8f8f8;
 }
@@ -540,10 +578,29 @@ header .nav li {
   grid-template-columns: 50% 45%;
 }
 
+@media screen and (max-width: 767px) {
+  .sobre-bg .sobre {
+    grid-template-areas: "texto";
+    grid-template-columns: 100%;
+  }
+}
+
 .sobre-bg .sobre .text {
   padding-top: 40px;
   max-width: 620px;
   grid-area: texto;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1139px) {
+  .sobre-bg .sobre .text {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sobre-bg .sobre .text {
+    padding: 0;
+  }
 }
 
 .sobre-bg .sobre .text h2 {
@@ -554,8 +611,27 @@ header .nav li {
   padding-top: 36px;
 }
 
+@media screen and (max-width: 767px) {
+  .sobre-bg .sobre .text {
+    text-align: center;
+  }
+}
+
 .sobre-bg .sobre .img-parceria {
   grid-area: imagem;
+  display: flex;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1139px) {
+  .sobre-bg .sobre .img-parceria {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .sobre-bg .sobre .img-parceria {
+    display: none;
+  }
 }
 
 .servicos {
@@ -576,6 +652,10 @@ header .nav li {
 
 .servicos .cards-servicos .card {
   max-width: 360px;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .servicos .cards-servicos .card h2 {
@@ -595,12 +675,50 @@ header .nav li {
   grid-template-columns: 1fr 2fr;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1139px) {
+  .diferenciais-bg .diferenciais {
+    grid-template-areas: "texto-img" "cards-diferenciais";
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .diferenciais-bg .diferenciais {
+    grid-template-areas: "texto-img" "cards-diferenciais";
+    grid-template-columns: 1fr;
+  }
+}
+
 .diferenciais-bg .diferenciais .texto-img {
   grid-area: texto-img;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1139px) {
+  .diferenciais-bg .diferenciais .texto-img {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .diferenciais-bg .diferenciais .texto-img {
+    text-align: center;
+  }
+}
+
 .diferenciais-bg .diferenciais .texto-img img {
   padding-top: 60px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1139px) {
+  .diferenciais-bg .diferenciais .texto-img img {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .diferenciais-bg .diferenciais .texto-img img {
+    display: none;
+  }
 }
 
 .diferenciais-bg .diferenciais .cards-diferenciais {
@@ -610,16 +728,24 @@ header .nav li {
   padding: 20px 0 0 10px;
 }
 
+@media screen and (max-width: 767px) {
+  .diferenciais-bg .diferenciais .cards-diferenciais {
+    grid-template: "card" 1fr;
+  }
+}
+
 .diferenciais-bg .diferenciais .cards-diferenciais .dif-card {
   max-width: 330px;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  gap: 70px;
 }
 
 .diferenciais-bg .diferenciais .cards-diferenciais .dif-card img {
   height: 65px;
   width: 65px;
   padding-bottom: 5px;
+  align-self: center;
 }
 
 .diferenciais-bg .diferenciais .cards-diferenciais .dif-card h2 {
@@ -646,11 +772,31 @@ header .nav li {
   grid-template-columns: 1fr 1.5fr;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1139px) {
+  .contato .contato-elementos {
+    grid-template-areas: "form";
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contato .contato-elementos {
+    grid-template-areas: "form";
+    grid-template-columns: 1fr;
+  }
+}
+
 .contato .contato-elementos form {
   grid-area: form;
   display: flex;
   flex-direction: column;
   padding-top: 30px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1139px) {
+  .contato .contato-elementos form {
+    padding: 0 100px;
+  }
 }
 
 .contato .contato-elementos form label {
@@ -702,6 +848,18 @@ header .nav li {
   padding: 30px 0 0 40px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1139px) {
+  .contato .contato-elementos .img-contato {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .contato .contato-elementos .img-contato {
+    display: none;
+  }
+}
+
 .footer-bg {
   background: #f8f8f8;
   margin-top: 60px;
@@ -717,6 +875,15 @@ header .nav li {
   display: flex;
   justify-content: space-between;
   text-align: left;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-bg .footer .info-footer {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .footer-bg .footer .info-footer h3 {
@@ -748,4 +915,10 @@ header .nav li {
   color: #fff;
   font-weight: 300;
   text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .copy-bg p {
+    font-size: 1em;
+  }
 }

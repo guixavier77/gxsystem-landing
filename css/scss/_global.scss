@@ -13,7 +13,10 @@ html {
     max-width: $tablet;
   }
 }
-
+img {
+  display: block;
+  max-width: 100%;
+}
 .logo {
   @include type-font(36);
   font-weight: 600;
