@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: $desktop;
+  margin: 0 auto;
+  @include device(smartphone) {
+    max-width: $smartphone;
+  }
+  @include device(tablet) {
+    max-width: $tablet;
+  }
+}
+
+.logo {
+  @include type-font(36);
+  font-weight: 600;
+  color: $color-primary;
+  user-select: none;
+  .logo-syst {
+    font-weight: 300;
+  }
+}
+
+// TITULOS E SUBTITULOS
+
+h3 {
+  color: $color-secondary;
+  @include type-font(24);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: $color-primary;
+  @include type-font(36);
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 15px 0;
+}
+
+p {
+  color: #707070;
+  @include type-font(18);
+}
