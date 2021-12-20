@@ -1,7 +1,7 @@
 <h1 align="center">
   GXsystem
 </h1>
-<h1>
+<h1 align="center">
   <img src="img/readme/preview.gif">
 </h1>
 
@@ -29,8 +29,7 @@ O projeto GXsystem é uma landing page que foi criada para simular um empresa fi
 
 ---
 
-<center>⚙ PROJETO EM ANDAMENTO...</center>
-
----
-
+<h1 align="center">
+  ⚙ PROJETO EM ANDAMENTO...
+</h1>
 Desenvolvido por Guilherme Xavier. 💻
