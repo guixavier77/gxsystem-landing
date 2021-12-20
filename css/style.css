@@ -495,7 +495,7 @@ header .nav li {
 }
 
 .intro-bg {
-  background: url("../img/bg.jpg") no-repeat center;
+  background: url("../../img/bg.jpg") no-repeat center;
   width: 100%;
   background-size: cover;
   height: 400px;
@@ -746,5 +746,6 @@ header .nav li {
 
 .copy-bg p {
   color: #fff;
+  font-weight: 300;
   text-align: center;
 }
