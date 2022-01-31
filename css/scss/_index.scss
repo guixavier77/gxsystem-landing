@@ -10,6 +10,7 @@ header {
   .menu {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     .list {
       display: flex;
       flex-direction: row;
@@ -372,8 +373,9 @@ header {
 }
 
 @media (max-width: $tablet) {
-  .header {
-    padding: 0 60px 0 60px;
+  header.container {
+    max-width: none;
+    padding: 0 10px 0 10px;
   }
   [data-menu="button"] {
     display: flex;
@@ -413,7 +415,7 @@ header {
     width: 200px;
     z-index: 200;
     top: 0;
-    padding: 60px 0 20px 0;
+    padding: 60px 0 10px 0;
     box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
   }
 
