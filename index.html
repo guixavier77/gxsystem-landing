@@ -8,24 +8,26 @@
   <title>Document</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <script>document.documentElement.classList.add("js")</script>
+  <script>document.documentElement.className += ' js';</script>
 </head>
 
 <body>
   <header class="container">
     <p class="logo">GX<span class="logo-syst">systems</span></p>
-    <ul class="nav">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#sobre">Quem somos</a></li>
-      <li><a href="#servicos">Serviços</a></li>
-      <li><a href="#contato">Contato</a></li>
-    </ul>
+    <nav class="menu">
+      <button data-menu="button" aria-expanded="false" aria-controls="menu"></button>
+      <ul data-menu="list" id="menu" class="list">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#sobre">Quem somos</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section class="intro-bg" id="home">
     <div class="intro container">
       <h1>Conecte seu <span>negócio</span> a <span>milhares</span> de pessoas.</h1>
-
       <a href="#contato">Solicitar orçamento</a>
     </div>
   </section>
@@ -173,7 +175,7 @@
       <p>Copyright © 2021 All rights reserved to GXsystems</p>
     </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
 
 </html>

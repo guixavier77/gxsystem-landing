@@ -6,11 +6,11 @@ html {
 .container {
   max-width: $desktop;
   margin: 0 auto;
-  @include device(smartphone) {
-    max-width: $smartphone;
-  }
   @include device(tablet) {
     max-width: $tablet;
+  }
+  @include device(smartphone) {
+    max-width: $smartphone;
   }
 }
 img {
@@ -24,6 +24,10 @@ img {
   user-select: none;
   .logo-syst {
     font-weight: 300;
+  }
+
+  @include device(smartphone) {
+    @include type-font(24);
   }
 }
 

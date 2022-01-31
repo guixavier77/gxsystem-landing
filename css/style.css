@@ -417,15 +417,15 @@ html {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 767px) {
-  .container {
-    max-width: 390px;
-  }
-}
-
 @media screen and (min-width: 768px) and (max-width: 1139px) {
   .container {
     max-width: 768px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 390px;
   }
 }
 
@@ -444,6 +444,13 @@ img {
 
 .logo .logo-syst {
   font-weight: 300;
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    font-size: 1.5em;
+    line-height: 1.25em;
+  }
 }
 
 h3 {
@@ -478,37 +485,37 @@ header {
 
 header .logo {
   padding: 15px 0;
+  z-index: 500;
 }
 
-header .nav {
+header .menu {
+  display: flex;
+  align-items: center;
+}
+
+header .menu .list {
   display: flex;
   flex-direction: row;
-  gap: 40px;
+  gap: 30px;
   flex-wrap: wrap;
   font-size: 1.125em;
   line-height: 1.66667em;
   font-weight: 300;
 }
 
-@media screen and (max-width: 767px) {
-  header .nav {
-    display: none;
-  }
-}
-
-header .nav a {
+header .menu .list a {
   color: #08307c;
   padding: 15px 0;
 }
 
-header .nav a:hover {
+header .menu .list a:hover {
   color: #fa8349;
   border-bottom: 3px solid #fa8349;
   transition: 0.9ms;
 }
 
-header .nav li {
-  padding: 15px 0;
+header .menu .list li {
+  padding: 15px 10px;
 }
 
 .intro-bg {
@@ -706,7 +713,7 @@ header .nav li {
 }
 
 .diferenciais-bg .diferenciais .texto-img img {
-  padding-top: 60px;
+  padding-top: 74px;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1139px) {
@@ -920,5 +927,69 @@ header .nav li {
 @media screen and (max-width: 767px) {
   .copy-bg p {
     font-size: 1em;
+  }
+}
+
+@keyframes show-down {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+[data-menu="button"] {
+  display: none;
+  background: none;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 60px 0 60px;
+  }
+  [data-menu="button"] {
+    display: flex;
+    background: none;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+    color: #fa8349;
+    cursor: pointer;
+    align-items: center;
+    position: relative;
+    z-index: 300;
+    border: none;
+  }
+  [data-menu="button"]::before {
+    margin-right: 4px;
+    content: "";
+    display: inline-block;
+    height: 3px;
+    width: 30px;
+    background: #fa8349;
+    box-shadow: 0 10px #fa8349, 0 -10px #fa8349;
+    transition: transform 0.3s;
+  }
+  [data-menu="button"].active::before {
+    transform: rotate(90deg);
+  }
+  #menu {
+    display: none;
+    position: absolute;
+    background: #fff;
+    border: none;
+    width: 200px;
+    z-index: 200;
+    top: 0;
+    padding: 60px 0 20px 0;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.2);
+  }
+  #menu.active {
+    display: block;
+    animation: show-down 0.3s forwards;
   }
 }
