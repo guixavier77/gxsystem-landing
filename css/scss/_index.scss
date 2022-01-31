@@ -424,3 +424,15 @@ header {
     animation: show-down 0.3s forwards;
   }
 }
+
+// animacao ao scroll
+[data-anime="scroll"] {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+}
+
+[data-anime="scroll"].ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: 1s;
+}
