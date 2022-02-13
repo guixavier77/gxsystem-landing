@@ -132,6 +132,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    justify-content: center;
     .card {
       max-width: 360px;
       width: auto;
@@ -193,6 +194,7 @@ header {
         "card card" 1fr;
 
       padding: 20px 0 0 10px;
+      justify-content: center;
       @include device(smartphone) {
         grid-template: "card" 1fr;
       }

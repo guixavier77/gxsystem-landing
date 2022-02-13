@@ -656,6 +656,7 @@ header .menu .list li {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  justify-content: center;
 }
 
 .servicos .cards-servicos .card {
@@ -734,6 +735,7 @@ header .menu .list li {
   display: grid;
   grid-template: "card card" 1fr "card card" 1fr;
   padding: 20px 0 0 10px;
+  justify-content: center;
 }
 
 @media screen and (max-width: 767px) {

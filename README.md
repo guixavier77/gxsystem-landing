@@ -16,6 +16,7 @@ O projeto GXsystem é uma landing page que foi criada para simular um empresa fi
 - HTML
 - CSS
 - SASS
+- JavaScript
 
 ---
 
