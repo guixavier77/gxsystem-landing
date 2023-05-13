@@ -30,7 +30,4 @@ O projeto GXsystem é uma landing page que foi criada para simular um empresa fi
 
 ---
 
-<h1 align="center">
-  ⚙ PROJETO EM ANDAMENTO...
-</h1>
 Desenvolvido por Guilherme Xavier. 💻
